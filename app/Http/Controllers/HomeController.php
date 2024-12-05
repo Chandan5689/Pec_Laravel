@@ -13,5 +13,8 @@ class HomeController extends Controller
             $contact_content = "Contact us at Barahi hall";
             return view('master',compact('about','contact','about_content','contact_content'));
         }
-    }
+
+}
+
+
 

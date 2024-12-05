@@ -55,7 +55,7 @@
         <section class="cta-one-space"></section>
         <!-- Call To Action End -->
 
-        @include('layouts.footer')
+        @include('layouts.footer_one)
        <!-- /.main-footer -->
 
         <section class="copyright text-center">
