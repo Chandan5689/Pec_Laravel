@@ -11,7 +11,7 @@ class HomeController extends Controller
             $contact = "Contact US";
             $about_content = "Welcome to my Website";
             $contact_content = "Contact us at Barahi hall";
-            return view('index',compact('about','contact','about_content','contact_content'));
+            return view('master',compact('about','contact','about_content','contact_content'));
         }
     }
 
