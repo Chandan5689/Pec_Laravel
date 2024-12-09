@@ -8,12 +8,12 @@
 
 <body class="custom-cursor">
 
-    <div class="custom-cursor__cursor"></div>
+    <!-- <div class="custom-cursor__cursor"></div>
     <div class="custom-cursor__cursor-two"></div>
 
     <div class="preloader">
         <div class="preloader__image" style="background-image: url(assets/images/loader.png);"></div>
-    </div>
+    </div> -->
     <!-- /.preloader -->
     <div class="page-wrapper">
      @include('layouts.header')   
@@ -55,7 +55,7 @@
         <section class="cta-one-space"></section>
         <!-- Call To Action End -->
 
-        @include('layouts.footer_one)
+        @include('layouts.footer_one')
        <!-- /.main-footer -->
 
         <section class="copyright text-center">
