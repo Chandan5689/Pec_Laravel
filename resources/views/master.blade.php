@@ -42,7 +42,7 @@
         @include('home.counter')
         <!-- Counter End -->
         <!-- Testimonial Start -->
-        @include('home.testimonial')
+        @include('home.feedback')
         <!-- Testimonial End -->
         <!-- Team Start -->
         @include('home.team')

@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/home',[App\Http\Controllers\HomeController::class,'index']);
 Route::get('/contact',[App\Http\Controllers\HomeController::class,'contact']);
 Route::get('/services',[App\Http\Controllers\ServiceController::class,'index']);
+
+//new page should go here.

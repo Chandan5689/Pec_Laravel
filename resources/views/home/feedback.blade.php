@@ -30,25 +30,29 @@
                 "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow\"></span>"]
                 }'>
                         <!-- Testimonial Item -->
+                        @foreach ($feedbacks as $feedback)
                         <div class="item">
                             <div class="testimonial-one__item">
                                 <div class="testimonial-one__author">
-                                    <img src="assets/images/resources/testimonial-1-author-1.png" alt="eduact">
+                                    <img src="assets/images/resources/{{$feedback->author_image}}" alt="eduact">
                                 </div><!-- testimonial-author -->
                                 <div class="testimonial-one__content">
                                     <div class="testimonial-one__quote">
-                                        Flexible Classes refers to the process of acquiring knowledge or skills through the use of digital technologies and the internet.
-                                        Flexible Classes refers to the process flexible Classes refers to the process
+                                        {{$feedback->info}}
                                     </div><!-- testimonial-quote -->
                                     <div class="testimonial-one__meta">
-                                        <h5 class="testimonial-one__title">Savannah Nguyen</h5>
-                                        <span class="testimonial-one__designation">UI/UX Designer</span>
+                                        <h5 class="testimonial-one__title">{{$feedback->name}}</h5>
+                                        <span class="testimonial-one__designation">{{$feedback->position}}</span>
                                     </div><!-- testimonial-meta -->
                                 </div>
                             </div>
                         </div>
+                        @endforeach
+                      
                         <!-- Testimonial Item -->
                         <!-- Testimonial Item -->
+
+                    {{--  --}}
                         <div class="item">
                             <div class="testimonial-one__item">
                                 <div class="testimonial-one__author">
