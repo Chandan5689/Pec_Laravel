@@ -51,32 +51,35 @@
                 }
             }
             }'>
+                    @foreach ($categories as $category)
                     <div class="item">
                         <div class="category-one__item">
                             <div class="category-one__wrapper" style="background-image: url(assets/images/shapes/category-shape.png);">
-                                <div class="category-one__thumb"><img src="assets/images/category/category-normal-1.png" alt="eduact" /></div><!-- /.category-thumb -->
+                                <div class="category-one__thumb"><img src="assets/images/category/{{$category->category_image}}" alt="eduact" /></div><!-- /.category-thumb -->
                                 <div class="category-one__content">
                                     <div class="category-one__icon">
-                                        <span class="icon-education"></span>
+                                        <span class="{{$category->category_icon}}"></span>
                                     </div><!-- /.category-icon -->
-                                    <h3 class="category-one__title">Business Analysis</h3><!-- /.category-title -->
-                                    <p class="category-one__text">8 Courses</p><!-- /.category-content -->
+                                    <h3 class="category-one__title">{{$category->title}}</h3><!-- /.category-title -->
+                                    <p class="category-one__text">{{$category->no_of_courses}} Courses</p><!-- /.category-content -->
                                 </div>
                             </div>
                             <div class="category-one__hover">
                                 <div class="category-one__hover__thumb">
-                                    <img src="assets/images/category/category-hover-1.png" alt="eduact" />
+                                    <img src="assets/images/category/{{$category->category_image}}" alt="eduact" />
                                 </div><!-- /.category-thumb -->
                                 <div class="category-one__hover__content">
                                     <div class="category-one__hover__icon">
-                                        <span class="icon-education"></span>
+                                        <span class="{{$category->category_icon}}"></span>
                                     </div><!-- /.category-icon -->
-                                    <h3 class="category-one__hover__title"><a href="about.html">Business Analysis</a></h3><!-- /.category-title -->
-                                    <p class="category-one__hover__text">8 Courses</p><!-- /.category-content -->
+                                    <h3 class="category-one__hover__title"><a href="about.html">{{$category->title}}</a></h3><!-- /.category-title -->
+                                    <p class="category-one__hover__text">{{$category->no_of_courses}}</p><!-- /.category-content -->
                                 </div>
                             </div>
                         </div><!-- /.category-card-one -->
                     </div>
+                    @endforeach
+                    
                     <div class="item">
                         <div class="category-one__item">
                             <div class="category-one__wrapper" style="background-image: url(assets/images/shapes/category-shape.png);">
