@@ -147,7 +147,7 @@
                                     <li class="dropdown">
                                         <a href="#">Blog Grid</a>
                                         <ul class="sub-menu">
-                                            <li><a href="blog">No Sidebar</a></li>
+                                            <li><a href="blogs.blog-no-sidebar">No Sidebar</a></li>
                                             <li><a href="blogs.blog-left-sidebar">Left Sidebar</a></li>
                                             <li><a href="blogs.blog-right-sidebar">Right Sidebar</a></li>
                                         </ul>
