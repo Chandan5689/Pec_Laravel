@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Service;
 use App\Models\Feedback;
 use App\Models\Category;
+use App\Models\Course;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,8 @@ class HomeController extends Controller
             // return $services;
             $feedbacks = Feedback::all();
             $categories = Category::all();
-            return view('master',compact('services','feedbacks','categories'));
+            $courses = Course::all();
+            return view('master',compact('services','feedbacks','categories','courses'));
         }
 
         public function contact()

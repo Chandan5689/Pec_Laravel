@@ -19,35 +19,39 @@
                     <h2 class="section-title__title">Featured Course On This Month</h2>
                 </div><!-- section-title -->
                 <div class="row">
-                    <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                    @foreach ($courses as $course )
+                    <div class="col-xl-4
+                     col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                         <div class="course-one__item">
                             <div class="course-one__thumb">
-                                <img src="assets/images/course/course-1-1.png" alt="eduact">
+                                <img src="assets/images/course/{{$course->course_image}}" alt="eduact">
                                 <a class="course-one__like" href="javascript:void(0);"><span class="icon-like"></span></a>
                             </div><!-- /.course-thumb -->
                             <div class="course-one__content">
-                                <div class="course-one__time">20 Hours</div>
+                                <div class="course-one__time">{{$course->course_hours}} Hours</div>
                                 <div class="course-one__ratings">
                                     <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
-                                    <div class="course-one__ratings__reviews">(25 Reviews)</div>
+                                    <div class="course-one__ratings__reviews">({{$course->course_rating}} Reviews)</div>
                                 </div>
                                 <h3 class="course-one__title">
-                                    <a href="management-consulting.html">Management Consultants in Competitive Markets</a>
+                                    <a href="management-consulting.html">{{$course->course_title}}</a>
                                 </h3>
                                 <div class="course-one__bottom">
                                     <div class="course-one__author">
-                                        <img src="assets/images/course/author-1.png" alt="eduact">
-                                        <h5 class="course-one__author__name">Guy Hawkins</h5>
-                                        <p class="course-one__author__designation">Project Manager</p>
+                                        <img src="assets/images/course/{{$course->course_author_image}}" alt="eduact">
+                                        <h5 class="course-one__author__name">{{$course->course_author_name}}</h5>
+                                        <p class="course-one__author__designation">{{$course->course_author_position}}</p>
                                     </div>
                                     <div class="course-one__meta">
-                                        <h4 class="course-one__meta__price">$473.00</h4>
-                                        <p class="course-one__meta__class">15 Lessons</p>
+                                        <h4 class="course-one__meta__price">${{$course->course_price}}</h4>
+                                        <p class="course-one__meta__class">{{$course->no_of_lessons}} Lessons</p>
                                     </div>
                                 </div>
                             </div><!-- /.course-content -->
                         </div><!-- /.course-card-one -->
                     </div>
+                    @endforeach
+                    
                     <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="200ms">
                         <div class="course-one__item">
                             <div class="course-one__thumb">

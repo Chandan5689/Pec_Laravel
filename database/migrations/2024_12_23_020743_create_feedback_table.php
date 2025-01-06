@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('feedback', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
+            $table->string('author_image');
             $table->string('info');
             $table->string('name');
             $table->string('position');

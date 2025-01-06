@@ -13,12 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/home',[App\Http\Controllers\HomeController::class,'index']);
+Route::get('/',[App\Http\Controllers\HomeController::class,'index']);
 Route::get('/contact',[App\Http\Controllers\HomeController::class,'contact']);
 Route::get('/services',[App\Http\Controllers\ServiceController::class,'index']);
+Route::get('/blog',[App\Http\Controllers\BlogController::class,'index']);
+Route::get('/blogs.blog-left-sidebar',[App\Http\Controllers\BlogController::class,'blog_left']);
+Route::get('/blogs.blog-right-sidebar',[App\Http\Controllers\BlogController::class,'blog_right']);
 
 //new page should go here.

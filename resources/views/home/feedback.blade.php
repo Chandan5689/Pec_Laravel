@@ -34,7 +34,7 @@
                         <div class="item">
                             <div class="testimonial-one__item">
                                 <div class="testimonial-one__author">
-                                    <img src="assets/images/resources/{{$feedback->author_image}}" alt="eduact">
+                                    <img src="images/{{$feedback->author_image}}" alt="eduact">
                                 </div><!-- testimonial-author -->
                                 <div class="testimonial-one__content">
                                     <div class="testimonial-one__quote">
@@ -52,7 +52,7 @@
                         <!-- Testimonial Item -->
                         <!-- Testimonial Item -->
 
-                    {{--  --}}
+                    
                         <div class="item">
                             <div class="testimonial-one__item">
                                 <div class="testimonial-one__author">
