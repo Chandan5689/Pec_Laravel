@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\FrontEnd;
+use App\Http\Controllers\Controller;
 use App\Models\Service;
 use App\Models\Feedback;
 use App\Models\Category;
@@ -15,12 +16,12 @@ class HomeController extends Controller
             $feedbacks = Feedback::all();
             $categories = Category::all();
             $courses = Course::all();
-            return view('master',compact('services','feedbacks','categories','courses'));
+            return view('frontEnd.home.homepage',compact('services','feedbacks','categories','courses'));
         }
 
         public function contact()
         {
-            return view('contact');
+            return view('frontEnd.contacts.contactpage');
         }
 
 }

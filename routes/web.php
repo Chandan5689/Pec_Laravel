@@ -13,14 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/',[App\Http\Controllers\HomeController::class,'index']);
-Route::get('/contact',[App\Http\Controllers\HomeController::class,'contact']);
-Route::get('/services',[App\Http\Controllers\ServiceController::class,'index']);
-Route::get('/blogs.blog-no-sidebar',[App\Http\Controllers\BlogController::class,'index']);
+Route::get('/home',[App\Http\Controllers\FrontEnd\HomeController::class,'index']);
+Route::get('/contacts.contactpage',[App\Http\Controllers\FrontEnd\HomeController::class,'contact']);
+Route::get('/blogs.blogpage',[App\Http\Controllers\BlogController::class,'index']);
 Route::get('/blogs.blog-left-sidebar',[App\Http\Controllers\BlogController::class,'blog_left']);
 Route::get('/blogs.blog-right-sidebar',[App\Http\Controllers\BlogController::class,'blog_right']);
 

@@ -2,14 +2,14 @@
             <nav class="main-menu">
                 <div class="container">
                     <div class="main-menu__logo">
-                        <a href="/">
+                        <a href="/home">
                             <img src="assets/images/logo-light.png" width="183" height="48" alt="Eduact">
                         </a>
                     </div><!-- /.main-menu__logo -->
                     <div class="main-menu__nav">
                         <ul class="main-menu__list">
                             <li class="dropdown megamenu">
-                                <a href="/">Home</a>
+                                <a href="/home">Home</a>
                                 <ul>
                                     <li>
                                         <section class="home-showcase">
@@ -147,7 +147,7 @@
                                     <li class="dropdown">
                                         <a href="#">Blog Grid</a>
                                         <ul class="sub-menu">
-                                            <li><a href="blogs.blog-no-sidebar">No Sidebar</a></li>
+                                            <li><a href="blogs.blogpage">No Sidebar</a></li>
                                             <li><a href="blogs.blog-left-sidebar">Left Sidebar</a></li>
                                             <li><a href="blogs.blog-right-sidebar">Right Sidebar</a></li>
                                         </ul>
@@ -171,7 +171,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="contact">Contact</a></li>
+                            <li><a href="contacts.contactpage">Contact</a></li>
                         </ul>
                     </div><!-- /.main-menu__nav -->
                     <div class="main-menu__right">

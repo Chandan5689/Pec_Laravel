@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('blog_grids', function (Blueprint $table) {
+        Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->string('image');
             $table->string('department');
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('blog_grids');
+        Schema::dropIfExists('blogs');
     }
 };
