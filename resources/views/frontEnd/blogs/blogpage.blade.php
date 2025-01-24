@@ -16,7 +16,7 @@
                     <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                         <div class="blog-two__item">
                             <div class="blog-two__image">
-                                <img src="assets/images/blog/blog-2-{{ $blog->image }}" alt="eduact">
+                                <img src="{{ $blog->image }}" alt="eduact">
                                 <a href="blog-details-right.html"></a>
                             </div><!-- /.blog-image -->
                             <div class="blog-two__content">
@@ -29,7 +29,7 @@
                                 </h3><!-- /.blog-title -->
                                 <div class="blog-two__meta">
                                     <div class="blog-two__meta__author">
-                                        <img src="assets/images/blog/author-1.png" alt="eduact" />
+                                        <img src="{{ $blog->author_image }}" alt="eduact" />
                                         <a href="blog-list-right.html">{{ $blog->author_name }}</a>
                                         {{ $blog->author_position }}
                                     </div>
@@ -40,7 +40,7 @@
                     </div>
                     @endforeach
                    
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                    {{-- <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                         <div class="blog-two__item">
                             <div class="blog-two__image">
                                 <img src="assets/images/blog/blog-2-2.jpg" alt="eduact">
@@ -164,7 +164,7 @@
                                 </div><!-- /.blog-meta -->
                             </div><!-- /.blog-content -->
                         </div><!-- /.blog-card-one -->
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="row">
                     <div class="col-md-12">
