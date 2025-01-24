@@ -6,12 +6,13 @@ use App\Models\Service;
 use App\Models\Feedback;
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index(){
-            $services = Service::all();  //get all services data from database 
+            $services = Service::take(4)->get();  //get all services data from database 
             // return $services;
             $feedbacks = Feedback::all();
             $categories = Category::all();
@@ -23,6 +24,12 @@ class HomeController extends Controller
         {
             return view('frontEnd.contacts.contactpage');
         }
+        public function blog()
+        {
+            $blogs = Blog::all();
+            return view('frontEnd.blogs.blogpage',compact('blogs'));
+        }
+
 
 }
 
