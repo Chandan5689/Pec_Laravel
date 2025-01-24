@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,14 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/home',[App\Http\Controllers\FrontEnd\HomeController::class,'index']);
-Route::get('/contacts.contactpage',[App\Http\Controllers\FrontEnd\HomeController::class,'contact']);
-Route::get('/blogs.blogpage',[App\Http\Controllers\BlogController::class,'index']);
-Route::get('/blogs.blog-left-sidebar',[App\Http\Controllers\BlogController::class,'blog_left']);
-Route::get('/blogs.blog-right-sidebar',[App\Http\Controllers\BlogController::class,'blog_right']);
+Route::get('/',[App\Http\Controllers\FrontEnd\HomeController::class,'index']);
+Route::get('/contact',[App\Http\Controllers\FrontEnd\HomeController::class,'contact']);
+Route::get('/blog',[App\Http\Controllers\FrontEnd\HomeController::class,'blog']);
+// Route::get('/blogs.blog-left-sidebar',[App\Http\Controllers\BackEnd\BlogController::class,'blog_left']);
+// Route::get('/blogs.blog-right-sidebar',[App\Http\Controllers\BackEnd\BlogController::class,'blog_right']);
 
 //new page should go here.
+
+Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resources([
+    'getServices' => \App\Http\Controllers\BackEnd\ServiceController::class,
+]);
+Route::resources([
+    'getBlogs' => \App\Http\Controllers\BackEnd\BlogController::class,
+]);
